@@ -9,6 +9,7 @@ session_start();
 <body>
 	<form>
 		<input type="button" value="Login" onclick="window.location.href='login.php'" />
+		<input type="button" value="Logout" onclick="window.location.href='logout.php'" />
 	</form>
 </body>
 </html>

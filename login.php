@@ -27,6 +27,7 @@ include 'functions.php';
             if($result){
                 if(mysqli_num_rows($result) == 1){
                     $row = mysqli_fetch_assoc($result);
+					$_SESSION['loggedin'] = true;
                     $_SESSION['userid'] = $row['ID'];
                     $_SESSION['username'] = $row['UserName'];
                     close();
@@ -37,7 +38,7 @@ include 'functions.php';
                     // else{
                     //     echo "Connection closed as it should.";
                     // }
-                    header('Location: member.php'); //<----- NEW PAGE HERE
+                    header('Location: home.php'); //<----- NEW PAGE HERE
                 }
                 else{
                     $_SESSION['message'] = "Please enter a valid username or password";
