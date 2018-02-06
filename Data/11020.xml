@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WEATHERDATA>
+  <MEASUREMENT>
+    <TEMP>1.1</TEMP>
+    <DEWP>-2.4</DEWP>
+    <STN>11020</STN>
+    <TIME>15:56:55</TIME>
+    <STP>1006.4</STP>
+    <SLP>1002.0</SLP>
+    <VISIB>25.0</VISIB>
+    <PRCP>0.23</PRCP>
+    <WDSP>32.3</WDSP>
+    <SNDP>1.9</SNDP>
+    <FRSHTT>011000</FRSHTT>
+    <CLDC>50.1</CLDC>
+    <DATE>2018-02-05</DATE>
+    <WNDDIR>320</WNDDIR>
+  </MEASUREMENT>
+</WEATHERDATA>
