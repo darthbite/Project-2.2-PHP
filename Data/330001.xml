@@ -3,7 +3,7 @@
   <MEASUREMENT>
     <TEMP>-5.0</TEMP>
     <DEWP>-8.9</DEWP>
-    <STN>10610</STN>
+    <STN>330001</STN>
     <TIME>15:57:29</TIME>
     <STP>1019.9</STP>
     <SLP>1006.9</SLP>
@@ -11,7 +11,7 @@
     <PRCP>0.09</PRCP>
     <WDSP>8.8</WDSP>
     <SNDP>0.0</SNDP>
-    <FRSHTT>110000</FRSHTT>
+    <FRSHTT>111111</FRSHTT>
     <CLDC>82.8</CLDC>
     <DATE>2018-02-05</DATE>
     <WNDDIR>128</WNDDIR>

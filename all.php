@@ -22,11 +22,11 @@ include 'functions.php'; ?>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a class="nav-link" href="all.php">All</a>
+                      <li class="nav-item active">
+                         <a class="nav-link" href="all.php">All <span class="sr-only">(current)</span></a>
                       </li>
-                     <li class="nav-item active">
-                        <a class="nav-link" href="Ukraine.php">Ukraine <span class="sr-only">(current)</span></a>
+                     <li class="nav-item ">
+                        <a class="nav-link" href="Ukraine.php">Ukraine</a>
                      </li>
                      <li class="nav-item">
                        <a class="nav-link" href="Colombia.php">Colombia</a>
@@ -52,22 +52,10 @@ include 'functions.php'; ?>
       }
 
       ?>
-
-<?php
-$query = "SELECT stn FROM `stations` WHERE country = 'Ukraine';";
-$array1 = array();
-connect();
-$result = mysqli_query($connection, $query);
-if($result){
-    while ($row = mysqli_fetch_assoc($result)) {
-        $array1 = array_merge($array1, array_map('trim', explode(",", $row['stn'])));
-    }
-}
-close();
-
- ?>
+</head>
+<body>
     <br>
-    <h3 class="text-center">Weather Data for Ukraine</h3>
+    <h3 class="text-center">Weather Data for All stations</h3>
     <table class="table">
       <thead class="thead-dark">
         <tr>
@@ -94,9 +82,6 @@ if (is_array($files))
 {
      foreach($files as $filename)
      {
-         $withoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $filename);
-         $withoutData = substr($withoutExt, 5);
-         if (in_array($withoutData, $array1)){
             $xml_file = file_get_contents($filename, FILE_TEXT);
             // and proceed with your code
             $name = new SimpleXMLElement($xml_file);
@@ -137,7 +122,6 @@ if (is_array($files))
                       echo"<td>". $name ->MEASUREMENT->CLDC."</td>";
                       echo"<td>". $name ->MEASUREMENT->WNDDIR."</td>";
                 echo"</tr>";
-            }
      }
 }
 ?>

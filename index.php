@@ -23,7 +23,7 @@
         <div class="container">
 
               <img src="images/logo.png" style="display: inline-block; max-width: 15%;"class="img-fluid">
-              
+
             </div>
     </header>
     <?php
@@ -46,7 +46,7 @@
                     $_SESSION['userid'] = $row['ID'];
                     $_SESSION['username'] = $row['UserName'];
                     close();
-                    header('Location: Ukraine.php'); //<----- NEW PAGE HERE
+                    header('Location: all.php'); //<----- NEW PAGE HERE
                 }
                 else{
                     $_SESSION['message'] = "Please enter a valid username or password";
